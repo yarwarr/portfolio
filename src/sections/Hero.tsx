@@ -81,7 +81,7 @@ export const HeroSection = () => {
           </div>
         </div>
         <div className="max-w-lg mx-auto">
-          <h1 className="font-serif text-3xl md:text-5xl text-center mt-8 tracking-wide">
+          <h1 className="font-serif text-3xl md:text-5xl text-center mt-8 tracking-wide font-semibold bg-gradient-to-r from-emerald-300 to-sky-400 text-transparent bg-clip-text">
             Mubashar Warriach
           </h1>
           <h1 className="font-serif text-3xl md:text-5xl text-center mt-8 tracking-wide">
