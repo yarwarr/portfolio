@@ -9,7 +9,7 @@ const calistoga = Calistoga({ subsets: ['latin'], variable: "--font-serif", weig
 export const metadata: Metadata = {
   title: "Mubashar Warriach · Full-Stack & iOS Engineer",
   description:
-    "Portfolio of Mubashar Warriach: the Uncommon Grounds ordering app, YarTV, iPhone Hub and Pulse, self-hosted on jailbroken iPhones.",
+    "Portfolio of Mubashar Warriach: the Uncommon Grounds ordering app, a crypto exchange built from scratch, YarTV, iPhone Hub and Pulse, self-hosted on jailbroken iPhones.",
   metadataBase: new URL("https://mubashar.cc"),
   openGraph: {
     title: "Mubashar Warriach",

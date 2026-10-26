@@ -1,4 +1,3 @@
-import exchangeProject from "@/assets/images/exchange.png";
 import commonappProject from "@/assets/images/commonapp.png";
 import bdProject from "@/assets/images/bd-project.png";
 import Image from "next/image";
@@ -19,18 +18,6 @@ const portfolioProjects = [
     ],
     link: "https://github.com/yarwarr",
     image: bdProject,
-  },
-  {
-    company: "Personal Project",
-    year: "2024",
-    title: "Trade Exchange",
-    results: [
-      { title: "Real-time trading system built on WebSockets" },
-      { title: "User accounts with authenticated trade balances" },
-      { title: "Task queue for scalable trade processing" },
-    ],
-    link: "https://github.com/yarwarr",
-    image: exchangeProject,
   },
   {
     company: "Personal Project",
