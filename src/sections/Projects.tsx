@@ -1,27 +1,35 @@
-import darkSaasLandingPage from "@/assets/images/dark-saas-landing-page.png";
 import exchangeProject from "@/assets/images/exchange.png";
 import commonappProject from "@/assets/images/commonapp.png";
 import bdProject from "@/assets/images/bd-project.png";
-import lightSaasLandingPage from "@/assets/images/light-saas-landing-page.png";
-import aiStartupLandingPage from "@/assets/images/ai-startup-landing-page.png";
 import Image from "next/image";
 import CheckCircleIcon from "@/assets/icons/check-circle.svg";
 import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
-import grainImage from "@/assets/images/grain.jpg";
 import { SectionHeader } from "@/components/SectionHeader";
 import { Card } from "@/components/Card";
 
 const portfolioProjects = [
   {
+    company: "BD Medical",
+    year: "2024",
+    title: "BD Project Dashboard",
+    results: [
+      { title: "Designed a full dashboard for project management" },
+      { title: "Built a clean, user-friendly interface for complex data" },
+      { title: "Tuned the app for fast loads and smooth interaction" },
+    ],
+    link: "https://github.com/yarwarr",
+    image: bdProject,
+  },
+  {
     company: "Personal Project",
     year: "2024",
     title: "Trade Exchange",
     results: [
-      { title: "Developed Real-Time Trading System Using WebSockets" },
-      { title: "Integrated User Authentication to Manage Trade Balances" },
-      { title: "Implemented Task Queueing System for Scalable Processing" },
+      { title: "Real-time trading system built on WebSockets" },
+      { title: "User accounts with authenticated trade balances" },
+      { title: "Task queue for scalable trade processing" },
     ],
-    link: "https://github.com/yarwarr/exchange-project",
+    link: "https://github.com/yarwarr",
     image: exchangeProject,
   },
   {
@@ -29,27 +37,12 @@ const portfolioProjects = [
     year: "2024",
     title: "Common App Clone",
     results: [
-      { title: "Built Role-Based Authentication for Students and Teachers" },
-      {
-        title:
-          "Optimized with Server-Side Components for 50% Faster Load Times",
-      },
-      { title: "Enhanced User Experience with Streamlined Interfaces" },
+      { title: "Role-based authentication for students and teachers" },
+      { title: "Server components cut load times by about 50%" },
+      { title: "Streamlined application flows for both roles" },
     ],
     link: "https://github.com/yarwarr",
     image: commonappProject,
-  },
-  {
-    company: "BD Medical Company",
-    year: "2024",
-    title: "BD Project",
-    results: [
-      { title: "Designed a Comprehensive Dashboard for Project Management" },
-      { title: "Crafted a Visually Appealing and User-Friendly Interface" },
-      { title: "Achieved High-Performance with an Optimized Web Application" },
-    ],
-    link: "https://github.com/yarwarr",
-    image: bdProject,
   },
 ];
 
@@ -58,9 +51,9 @@ export const ProjectsSection = () => {
     <section className="pb-16 lg:py-24">
       <div className="container">
         <SectionHeader
-          eyebrow="Real-world Results"
-          title="Featured Projects"
-          description="See how I transformed concepts into engaging digital experiences."
+          eyebrow="Earlier Work"
+          title="Web Projects"
+          description="Full-stack web apps from work and from building on my own."
         />
         <div className="flex flex-col mt-10 gap-20 md:mt-20">
           {portfolioProjects.map((project, projectIndex) => (
@@ -94,9 +87,9 @@ export const ProjectsSection = () => {
                       </li>
                     ))}
                   </ul>
-                  <a href={project.link}>
+                  <a href={project.link} target="_blank" rel="noopener noreferrer" className="inline-block w-full md:w-auto">
                     <button className="bg-white text-gray-950 h-12 w-full md:w-auto px-8 rounded-xl font-semibold inline-flex items-center justify-center gap-2 mt-8">
-                      <span>Visit Live Site</span>
+                      <span>View on GitHub</span>
                       <ArrowUpRightIcon className="size-4" />
                     </button>
                   </a>

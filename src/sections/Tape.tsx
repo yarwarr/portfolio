@@ -2,15 +2,15 @@ import StarIcon from "@/assets/icons/star.svg";
 import { Fragment } from "react";
 
 const words = [
+  "Native iOS",
+  "React Native",
+  "Next.js",
+  "Self-Hosted",
   "Performant",
   "Accessible",
   "Secure",
-  "Interactive",
+  "Observable",
   "Responsive",
-  "User Friendly",
-  "Maintainance",
-  "SEO Friendly",
-  "Usable",
   "Reliable",
 ];
 export const TapeSection = () => {

@@ -6,9 +6,15 @@ import StarIcon from "@/assets/icons/star.svg";
 import HeroOrbit from "@/components/HeroOrbit";
 import SparkleIcon from "@/assets/icons/sparkle.svg";
 
+const stats = [
+  { value: "4", label: "apps live on mubashar.cc" },
+  { value: "3", label: "iPhones serving them" },
+  { value: "0", label: "cloud servers" },
+];
+
 export const HeroSection = () => {
   return (
-    <div className="py-32 md:py-48 lg:py-60 relative z-0 overflow-x-clip">
+    <div className="pt-32 pb-20 md:pt-48 md:pb-28 lg:pt-56 lg:pb-32 relative z-0 overflow-x-clip">
       <div className="absolute inset-0 [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_70%,transparent)]">
         <div
           className="absolute inset-0 -z-30 opacity-5"
@@ -80,28 +86,39 @@ export const HeroSection = () => {
             </div>
           </div>
         </div>
-        <div className="max-w-lg mx-auto">
-          <h1 className="font-serif text-3xl md:text-5xl text-center mt-8 tracking-wide font-semibold bg-gradient-to-r from-emerald-300 to-sky-400 text-transparent bg-clip-text">
+        <div className="max-w-2xl mx-auto">
+          <h1 className="font-serif text-4xl md:text-6xl text-center mt-8 tracking-wide font-semibold bg-gradient-to-r from-emerald-300 to-sky-400 text-transparent bg-clip-text">
             Mubashar Warriach
           </h1>
-          <h1 className="font-serif text-3xl md:text-5xl text-center mt-8 tracking-wide">
-            Building Exceptional User Experiences
-          </h1>
-          <p className="mt-4 text-center text-white/60 md:text-lg">
-            I specialize in making great full stack web apps to support any
-            project needs
+          <p className="font-serif text-2xl md:text-4xl text-center mt-6 tracking-wide">
+            I build apps end to end, and host them on my own iPhones
+          </p>
+          <p className="mt-4 text-center text-white/60 md:text-lg max-w-xl mx-auto">
+            Full-stack engineer working across native iOS, React Native and Next.js, from the
+            product down to the servers it runs on.
           </p>
         </div>
         <div className="flex flex-col md:flex-row justify-center items-center mt-8 gap-4">
-          <button className="inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl">
+          <a href="#work" className="inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl hover:bg-white/5 transition">
             <span className="font-semibold">Explore My Work</span>
             <ArrowDown className="size-4" />
-          </button>
-          <button className="inline-flex items-center gap-2 border border-white bg-white text-gray-900 h-12 px-6 rounded-xl">
+          </a>
+          <a href="#contact" className="inline-flex items-center gap-2 border border-white bg-white text-gray-900 h-12 px-6 rounded-xl">
             <span>👋</span>
             <span className="font-semibold ">Let&apos;s Connect!</span>
-          </button>
+          </a>
         </div>
+        <dl className="mt-12 grid grid-cols-3 max-w-xl mx-auto divide-x divide-white/10 border border-white/10 rounded-2xl bg-gray-950/40 backdrop-blur">
+          {stats.map((stat) => (
+            <div key={stat.label} className="px-3 py-4 text-center">
+              <dt className="sr-only">{stat.label}</dt>
+              <dd className="font-serif text-2xl md:text-3xl bg-gradient-to-r from-emerald-300 to-sky-400 text-transparent bg-clip-text">
+                {stat.value}
+              </dd>
+              <dd className="text-xs md:text-sm text-white/50 mt-1">{stat.label}</dd>
+            </div>
+          ))}
+        </dl>
       </div>
     </div>
   );

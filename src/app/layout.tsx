@@ -7,8 +7,15 @@ const inter = Inter({ subsets: ['latin'], variable: "--font-sans"})
 const calistoga = Calistoga({ subsets: ['latin'], variable: "--font-serif", weight: ["400"]});
 
 export const metadata: Metadata = {
-  title: "Mubashar Warriach",
-  description: "Created by Mubashar Warriach",
+  title: "Mubashar Warriach · Full-Stack & iOS Engineer",
+  description:
+    "Portfolio of Mubashar Warriach: the Uncommon Grounds ordering app, YarTV, iPhone Hub and Pulse, self-hosted on jailbroken iPhones.",
+  metadataBase: new URL("https://mubashar.cc"),
+  openGraph: {
+    title: "Mubashar Warriach",
+    description: "I build apps end to end, and host them on my own iPhones.",
+    url: "https://mubashar.cc",
+  },
 };
 
 export default function RootLayout({
