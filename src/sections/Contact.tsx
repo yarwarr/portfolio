@@ -1,4 +1,5 @@
 import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
+import LinkedInIcon from "@/assets/icons/linkedin.svg";
 import grainImage from "@/assets/images/grain.jpg";
 
 export const ContactSection = () => {
@@ -22,12 +23,22 @@ export const ContactSection = () => {
                 discuss if I can help you achieve your goals.
               </p>
             </div>
-            <div>
-              <a href="mailto:maw8051@rit.edu">
-                <button className="text-white bg-gray-900 inline-flex items-center px-6 h-12 rounded-xl gap-2 w-max border border-gray-900">
-                  <span className="font-semibold">Contact Me</span>
-                  <ArrowUpRightIcon className="size-4" />
-                </button>
+            <div className="flex flex-col lg:flex-row gap-3 flex-none">
+              <a
+                href="mailto:maw8051@rit.edu"
+                className="text-white bg-gray-900 inline-flex items-center justify-center px-6 h-12 rounded-xl gap-2 w-max border border-gray-900"
+              >
+                <span className="font-semibold">Contact Me</span>
+                <ArrowUpRightIcon className="size-4" />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/mubashar-warriach/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center px-6 h-12 rounded-xl gap-2 w-max border border-gray-900 hover:bg-gray-900/10 transition"
+              >
+                <LinkedInIcon className="size-4" />
+                <span className="font-semibold">LinkedIn</span>
               </a>
             </div>
           </div>

@@ -1,44 +1,26 @@
-import memojiAvatar1 from "@/assets/images/memoji-avatar-1.png";
-import memojiAvatar2 from "@/assets/images/memoji-avatar-2.png";
-import memojiAvatar3 from "@/assets/images/memoji-avatar-3.png";
-import memojiAvatar4 from "@/assets/images/memoji-avatar-4.png";
-import memojiAvatar5 from "@/assets/images/memoji-avatar-5.png";
 import { SectionHeader } from "@/components/SectionHeader";
-import Image from "next/image";
 import { Card } from "@/components/Card";
-import { Fragment } from "react";
+import LinkedInIcon from "@/assets/icons/linkedin.svg";
+import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
 
-const testimonials = [
+// Copied word for word from the recommendations on LinkedIn, newest first.
+const recommendations = [
+  {
+    name: "Nathan Carrington",
+    initials: "NC",
+    position: "Vice President, Global Regulatory Affairs @ Beckman Coulter Diagnostics",
+    context: "Managed me directly at BD",
+    date: "May 2025",
+    text: "Mubashar has provided excellent support to a number of Regulatory Affairs teams at BD, bringing strong IT expertise to streamline and optimize various regulatory workflows. Although newer to the RA space, Mubashar showed an eagerness to learn more about regulatory requirements and processes, enabling him to better create solutions that support end users. His willingness to try new things, ability to iterate and learn as projects progress, openness to feedback, positive work ethic, and cheerful demeanor have made him a strong asset to the organization.",
+  },
   {
     name: "Brendan Kenny",
+    initials: "BK",
     position: "Development Director @ CHESS Health",
-    text: "Mubashar worked for me as a co-op in the second half of 2023. He did great work for us, and showed proficiency in to both backend and frontend technologies. He picks up concepts quickly, and always is on the look out for new ideas/technologies. He would be a great addition to any agile development team. ",
-    avatar: memojiAvatar1,
+    context: "Managed me directly during my co-op",
+    date: "January 2024",
+    text: "Mubashar worked for me as a co-op in the second half of 2023. He did great work for us, and showed proficiency in to both backend and frontend technologies. He picks up concepts quickly, and always is on the look out for new ideas/technologies. He would be a great addition to any agile development team.",
   },
-  // {
-  //   name: "Olivia Green",
-  //   position: "Head of Design @ GreenLeaf",
-  //   text: "Working with Mubashar was a pleasure. His expertise in frontend development brought our designs to life in a way we never imagined. The website has exceeded our expectations.",
-  //   avatar: memojiAvatar2,
-  // },
-  // {
-  //   name: "Daniel White",
-  //   position: "CEO @ InnovateCo",
-  //   text: "Mubashar's ability to create seamless user experiences is unmatched. Our website has seen a significant increase in conversions since launching the new design. We couldn't be happier.",
-  //   avatar: memojiAvatar3,
-  // },
-  // {
-  //   name: "Emily Carter",
-  //   position: "Product Manager @ GlobalTech",
-  //   text: "Mubashar is a true frontend wizard. He took our complex product and transformed it into an intuitive and engaging user interface. We're already seeing positive feedback from our customers.",
-  //   avatar: memojiAvatar4,
-  // },
-  // {
-  //   name: "Michael Brown",
-  //   position: "Director of IT @ MegaCorp",
-  //   text: "Mubashar's work on our website has been nothing short of exceptional. He's a talented developer who is also a great communicator. We highly recommend him.",
-  //   avatar: memojiAvatar5,
-  // },
 ];
 
 export const TestimonialsSection = () => {
@@ -47,43 +29,44 @@ export const TestimonialsSection = () => {
       <div className="container">
         <SectionHeader
           title="What Managers Say about Me"
-          eyebrow="Happy Employers"
-          description="Don't take my word for it. See what my clients have to say about my
-        work."
+          eyebrow="Recommendations"
+          description="Don't take my word for it. Here's what the people I've reported to wrote about me on LinkedIn."
         />
-        <div className="mt-12 lg:mt-20 flex overflow-x-clip [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)] py-4 -my-4">
-          <div className="flex gap-8 pr-8 flex-none animate-move-left [animation-duration:90s] hover:[animation-play-state:paused]">
-            {[...new Array(2)].fill(0).map((_, idx) => (
-              <Fragment key={idx}>
-                {testimonials.map((testimonial) => (
-                  <Card
-                    key={testimonial.name}
-                    className="max-w-xs md:max-w-md p-6 md:p-8 hover:-rotate-3 transition duration-300"
-                  >
-                    <div className="flex gap-4 items-center">
-                      <div className="size-14 bg-gray-700 inline-flex items-center justify-center rounded-full flex-shrink-0">
-                        <Image
-                          src={testimonial.avatar}
-                          alt={testimonial.name}
-                          className="max-h-full"
-                        />
-                      </div>
-
-                      <div className="">
-                        <div className="font-semibold">{testimonial.name}</div>
-                        <div className="text-sm text-white/40">
-                          {testimonial.position}
-                        </div>
-                      </div>
-                    </div>
-                    <p className="mt-4 md:mt-6 text-sm md:text-base">
-                      {testimonial.text}
-                    </p>
-                  </Card>
-                ))}
-              </Fragment>
-            ))}
-          </div>
+        <div className="mt-12 lg:mt-20 grid grid-cols-1 md:grid-cols-2 gap-8">
+          {recommendations.map((rec) => (
+            <Card key={rec.name} className="p-6 md:p-8 flex flex-col">
+              <span aria-hidden className="font-serif text-6xl leading-none h-8 bg-gradient-to-r from-emerald-300 to-sky-400 text-transparent bg-clip-text">
+                &ldquo;
+              </span>
+              <blockquote className="mt-4 text-sm md:text-base text-white/80 flex-1">
+                {rec.text}
+              </blockquote>
+              <div className="mt-6 pt-6 border-t border-white/10 flex gap-4 items-center">
+                <div className="size-12 rounded-full bg-gradient-to-r from-emerald-300 to-sky-400 text-gray-900 font-semibold inline-flex items-center justify-center flex-none">
+                  {rec.initials}
+                </div>
+                <div>
+                  <div className="font-semibold">{rec.name}</div>
+                  <div className="text-sm text-white/50">{rec.position}</div>
+                  <div className="text-xs text-white/40 mt-1">
+                    {rec.context} &middot; {rec.date}
+                  </div>
+                </div>
+              </div>
+            </Card>
+          ))}
+        </div>
+        <div className="mt-10 flex justify-center">
+          <a
+            href="https://www.linkedin.com/in/mubashar-warriach/details/recommendations/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="border border-white/15 h-12 px-6 rounded-xl font-semibold inline-flex items-center justify-center gap-2 hover:bg-white/5 transition"
+          >
+            <LinkedInIcon className="size-4" />
+            <span>Read them on LinkedIn</span>
+            <ArrowUpRightIcon className="size-4" />
+          </a>
         </div>
       </div>
     </div>
