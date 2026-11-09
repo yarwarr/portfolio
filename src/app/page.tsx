@@ -1,5 +1,6 @@
 import { AboutSection } from "@/sections/About";
 import { ContactSection } from "@/sections/Contact";
+import { CricketSection } from "@/sections/Cricket";
 import { ExchangeSection } from "@/sections/Exchange";
 import { Footer } from "@/sections/Footer";
 import { Header } from "@/sections/Header";
@@ -25,6 +26,9 @@ export default function Home() {
       </section>
       <section id="iphones">
         <IPhonesSection />
+      </section>
+      <section id="cricket">
+        <CricketSection />
       </section>
       <section id="tape">
         <TapeSection />

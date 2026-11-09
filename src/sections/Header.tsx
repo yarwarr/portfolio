@@ -3,7 +3,8 @@ const links = [
   { href: "#exchange", label: "Exchange" },
   { href: "#work", label: "Work" },
   { href: "#iphones", label: "iPhones" },
-  { href: "#about", label: "About" },
+  { href: "#cricket", label: "Cricket" },
+  { href: "#about", label: "About", wideOnly: true },
 ];
 
 export const Header = () => {
